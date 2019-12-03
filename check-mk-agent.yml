@@ -1,0 +1,4 @@
+---
+- hosts: all
+  roles:
+    - hoplacloud.check-mk-agent
