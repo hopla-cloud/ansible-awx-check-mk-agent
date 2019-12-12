@@ -1,4 +1,8 @@
 ---
 - hosts: all
   roles:
+<<<<<<< HEAD
     - hoplacloud.check_mk_agent
+=======
+    - ansible-role-check-mk-agent
+>>>>>>> 0c2e9e3a3151e434bf75dc9de68d0a9a56c63dee
