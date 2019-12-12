@@ -1,4 +1,4 @@
 ---
 - name: Install supervision agent from rpm
   yum:
-    name: {{ url_rpm }}
+    name: "{{ url_rpm }}"
