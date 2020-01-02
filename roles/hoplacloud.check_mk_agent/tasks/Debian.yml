@@ -2,3 +2,15 @@
 - name: Install supervision agent from deb
   apt:
     deb: "{{ url_deb }}"
+
+- name: Install plugin apache_status
+  copy:
+    src: apache_status.py
+    dest: /usr/lib/check_mk_agent/plugins/apache_status.py
+  when: "'meta-checkmk_enabled_true' in {{ group_names }}"
+
+- name: Install plugin acronis
+  copy:
+    src: Check_Acronis.py
+    dest: /usr/lib/check_mk_agent/plugins/Check_Acronis
+  when: "'meta-acronis_enabled_true' in {{ group_names }}"

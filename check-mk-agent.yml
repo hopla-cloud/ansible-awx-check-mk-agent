@@ -1,4 +1,4 @@
 ---
-- hosts: all
+- hosts: meta-checkmk_enabled_true
   roles:
     - hoplacloud.check_mk_agent
