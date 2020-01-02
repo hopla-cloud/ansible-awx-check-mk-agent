@@ -7,7 +7,7 @@
   copy:
     src: apache_status.py
     dest: /usr/lib/check_mk_agent/plugins/apache_status.py
-    mode: '0644'
+    mode: '0544'
     owner: root
     group: root
   when: "'meta-is_apache_true' in group_names"
