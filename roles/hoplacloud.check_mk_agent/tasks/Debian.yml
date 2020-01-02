@@ -16,7 +16,7 @@
   copy:
     src: Check_Acronis.py
     dest: /usr/lib/check_mk_agent/plugins/Check_Acronis.py
-    mode: '0644'
+    mode: '0544'
     owner: root
     group: root
   when: "'meta-acronis_enabled_true' in group_names"
