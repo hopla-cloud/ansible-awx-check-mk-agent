@@ -1,3 +1,4 @@
+#!/usr/bin/python
 # _ _ _
 #(_|_) |
 # _ _| |_   _  ___
@@ -28,8 +29,8 @@ LastJobToday=os.system ("acrocmd list activities --output=raw | head -n 6 | grep
 if LastJobFail==256 and LastJobWarn==256:
 	#si le dernier job n'est pas plus vieux de 48h
 	if LastJobToday!=256 or LastJobYesterday!=256:
-		print("0 _Acronis_Backup - No error in last backup")
+		print("0 Acronis_Backup - No error in last backup")
 	else:
-		print("1 _Acronis_Backup - Last backup older than 48h")
+		print("1 Acronis_Backup - Last backup older than 48h")
 else:
-	print("2 _Acronis_Backup - Last backup failed")
+	print("2 Acronis_Backup - Last backup failed")
