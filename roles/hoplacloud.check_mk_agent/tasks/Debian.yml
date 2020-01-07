@@ -30,7 +30,7 @@
     group: root
   when: "'meta-is_nginx_true' in group_names"
 
-- name: Install plugin nginx_status
+- name: Install plugin mysql
   copy:
     src: mysql.sh
     dest: /usr/lib/check_mk_agent/plugins/mysql.sh
