@@ -38,3 +38,12 @@
     owner: root
     group: root
   when: "'meta-is_mysql_true' in group_names"
+
+- name: Install plugin MariaDB
+  copy:
+    src: mysql.sh
+    dest: /usr/lib/check_mk_agent/plugins/mysql.sh
+    mode: '0544'
+    owner: root
+    group: root
+  when: "'meta-is_mariadb_true' in group_names"
