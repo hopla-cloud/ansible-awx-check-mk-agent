@@ -39,10 +39,28 @@
     group: root
   when: "'meta-is_mysql_true' in group_names"
 
+- name: Copy configuration plugin MySQL
+  copy:
+    src: mysql.cfg
+    dest: /etc/check_mk/mysql.sh
+    mode: '0544'
+    owner: root
+    group: root
+  when: "'meta-is_mysql_true' in group_names"
+
 - name: Install plugin MariaDB
   copy:
     src: mysql.sh
     dest: /usr/lib/check_mk_agent/plugins/mysql.sh
+    mode: '0544'
+    owner: root
+    group: root
+  when: "'meta-is_mariadb_true' in group_names"
+
+- name: Copy configuration plugin MariaDB
+  copy:
+    src: mysql.cfg
+    dest: /etc/check_mk/mysql.sh
     mode: '0544'
     owner: root
     group: root
