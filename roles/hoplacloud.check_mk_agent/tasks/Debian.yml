@@ -42,7 +42,7 @@
 - name: Copy configuration plugin MySQL
   copy:
     src: mysql.cfg
-    dest: /etc/check_mk/mysql.sh
+    dest: /etc/check_mk/mysql.cfg
     mode: '0544'
     owner: root
     group: root
@@ -60,7 +60,7 @@
 - name: Copy configuration plugin MariaDB
   copy:
     src: mysql.cfg
-    dest: /etc/check_mk/mysql.sh
+    dest: /etc/check_mk/mysql.cfg
     mode: '0544'
     owner: root
     group: root
