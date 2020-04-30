@@ -30,6 +30,11 @@
     group: root
   when: "'meta-is_nginx_true' in group_names"
 
+- name: check if rules file exists
+  stat:
+    path: /usr/lib/check_mk_agent/plugins/mysql.sh
+  register: mysql_file_check
+
 - name: Install plugin mysql
   copy:
     src: mysql.sh
@@ -46,7 +51,7 @@
     mode: '0544'
     owner: root
     group: root
-  when: "'meta-is_mysql_true' in group_names"
+  when: "'meta-is_mysql_true' in group_names and mysql_file_check.stat.exists == False"
 
 - name: Install plugin MariaDB
   copy:
@@ -64,4 +69,4 @@
     mode: '0544'
     owner: root
     group: root
-  when: "'meta-is_mariadb_true' in group_names"
+  when: "'meta-is_mariadb_true' in group_names and mysql_file_check.stat.exists == False"
