@@ -1,5 +1,5 @@
 ---
-- hosts: meta-checkmk_enabled_true
+- hosts: meta-checkmk_enabled_true:meta-ssh_pub_ip_*
   vars:
     ansible_connection: ssh
     ansible_host: "{{openstack.metadata.ssh_pub_ip}}"

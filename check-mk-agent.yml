@@ -1,4 +1,4 @@
 ---
-- hosts: meta-checkmk_enabled_true
+- hosts: meta-checkmk_enabled_true:!meta-ssh_pub_ip_*
   roles:
     - hoplacloud.check_mk_agent
